@@ -7,13 +7,88 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+
+    <EditText
+        android:id="@+id/number1Text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="Number 1"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/number2Text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/number2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="57dp"
+        android:ems="10"
+        android:hint="Number 2"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/number1Text"
+        app:layout_constraintTop_toBottomOf="@+id/number1Text" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="138dp"
+        android:text="Result : "
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="95dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2Text">
+
+        <Button
+            android:id="@+id/sumButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:onClick="mySum"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/subtractButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:onClick="mySub"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/multiplyButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:onClick="myMul"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/divideButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:onClick="myDiv"
+            android:text="/" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
